@@ -114,10 +114,7 @@ class Comment(models.Model):
         auto_now_add=True,
         verbose_name='Дата добавления'
     )
-    updated_at = models.DateTimeField(
-        auto_now=True,
-        verbose_name='Дата обновления'
-    )
+    
 
     class Meta:
         ordering = ('created_at',)

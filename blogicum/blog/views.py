@@ -109,7 +109,7 @@ def profile(request, username):
             is_published=True,
             category__is_published=True,
             pub_date__lte=timezone.now()
-        ).order_by('id')
+        ).order_by('-pub_date')
     paginator = Paginator(posts, 10)
     page_number=request.GET.get('page')
     page_obj = paginator.get_page(page_number)

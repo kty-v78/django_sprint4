@@ -9,9 +9,6 @@ from django.views.generic.edit import CreateView
 handler404 = 'pages.views.page_not_found'
 handler500 = 'pages.views.server_error'
 
-
-app_name = 'pages'
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls', namespace='blog')),
